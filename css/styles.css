@@ -51,8 +51,15 @@ body {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 h1,
@@ -90,12 +97,30 @@ img {
 }
 
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
   margin: 0 auto;
-  /* outline: 2px solid palevioletred; */
+  padding-right: 16px;
+  padding-left: 16px;
+  min-width: 320px;
+  max-width: 428px;
+
+  outline: 2px solid palevioletred;
 }
 
+/* Tablet screen */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Desctop screen */
+@media screen and (min-width: 1158px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1158px;
+  }
+}
 /* Header */
 .header {
   border-bottom: 1px solid var(--border-color);
@@ -395,7 +420,27 @@ img {
 /* Customers section */
 .customer-icon-list {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .customer-icon-list {
+    row-gap: 72px;
+    column-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-icon-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .customer-icon-list {
+    flex-wrap: wrap;
+  }
 }
 
 .customer-icon-link {
