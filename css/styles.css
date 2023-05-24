@@ -158,8 +158,14 @@ img {
   color: var(--secondary-text-color);
 }
 
+@media screen and (max-width: 767px) {
+  .burger-btn {
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .burger-icon {
+  .burger-btn {
     display: none;
   }
 }
