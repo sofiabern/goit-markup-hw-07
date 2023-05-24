@@ -296,11 +296,44 @@ img {
 /* Features section */
 .feature-list {
   display: flex;
-  gap: 24px;
+  justify-content: center;
 }
 
-.feature-list-item {
-  width: 264px;
+@media screen and (max-width: 767px) {
+  .feature-list-item {
+    width: 396px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list-item {
+    width: 356px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .feature-list-item {
+    width: 264px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list {
+    gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .feature-list {
+    flex-wrap: wrap;
+  }
 }
 
 .feature-icon-container {
@@ -315,6 +348,12 @@ img {
   background-color: var(--tertiary-bg-color);
 }
 
+@media screen and (max-width: 1157px) {
+  .feature-icon-container {
+    display: none;
+  }
+}
+
 .feature-subtitle {
   margin-bottom: 8px;
 
@@ -325,9 +364,21 @@ img {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 767px) {
+  .feature-subtitle {
+    text-align: center;
+  }
+}
+
 /* Duties section */
 .duties {
   padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1157px) {
+  .duties {
+    display: none;
+  }
 }
 
 .duties-title,
@@ -356,7 +407,26 @@ img {
 
 .team-list {
   display: flex;
-  gap: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .team-list {
+    gap: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 1157px) {
+  .team-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .team-item-bg {
@@ -479,13 +549,20 @@ img {
 }
 
 /* Logo */
-.footer-container {
-  display: flex;
+/* .footer-container {
   align-items: baseline;
+} */
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .footer-logo {
-  display: inline-block;
+  display: block;
   margin-bottom: 16px;
 
   color: var(--iris-accent-color);
@@ -496,9 +573,20 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+  .footer-logo {
+    text-align: center;
+  }
+}
 
-.footer-logo-container {
+/* .footer-logo-container {
   margin-right: 120px;
+} */
+
+@media screen and (max-width: 767px) {
+  .footer-logo-container {
+    margin-bottom: 72px;
+  }
 }
 
 .footer-logo-accent {
@@ -511,6 +599,12 @@ img {
   color: var(--light-text);
 }
 
+@media screen and (max-width: 767px) {
+  .footer-text {
+    margin: 0 auto;
+  }
+}
+
 .footer-social-text,
 .footer-form-text {
   color: var(--tertiary-text-color);
@@ -521,9 +615,23 @@ img {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-social-text,
+  .footer-form-text {
+    text-align: center;
+  }
+}
+
 .footer-social-list {
   display: flex;
   gap: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-social-list {
+    margin-bottom: 72px;
+    justify-content: center;
+  }
 }
 
 .footer-social-link {
@@ -553,10 +661,16 @@ img {
   margin-left: auto;
 }
 
-.footer-form {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+/* .footer-form {
+ 
+} */
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 }
 
 .email-btn-wrapper {
@@ -568,7 +682,6 @@ img {
 .footer-input-email {
   padding-left: 16px;
 
-  width: 264px;
   height: 40px;
 
   font-size: 12px;
@@ -581,6 +694,19 @@ img {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-input-email {
+    margin-bottom: 16px;
+    width: 398px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-input-email {
+    width: 264px;
+  }
+}
+
 .footer-input-email::placeholder {
   color: #ffffff;
 }
@@ -590,6 +716,7 @@ img {
 }
 
 .footer-form-btn {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
