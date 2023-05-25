@@ -46,7 +46,7 @@
           </ul>
         </nav>
         <button
-          class="burger-btn js-open-menu"
+          class="menu-toggle js-open-menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -148,6 +148,10 @@
           <ul class="duties-list list">
             <li class="duties-list-item">
               <img
+                srcset="
+                  ./images/duties-section/monitor@1x.jpg 1x,
+                  ./images/duties-section/monitor@2x.jpg 2x
+                "
                 src="./images/duties-section/monitor.jpg"
                 alt="a computer monitor"
                 width="360"
@@ -156,6 +160,10 @@
             </li>
             <li class="duties-list-item">
               <img
+                srcset="
+                  ./images/duties-section/tabs@1x.jpg 1x,
+                  ./images/duties-section/tabs@2x.jpg 2x
+                "
                 src="./images/duties-section/phone.jpg"
                 alt="a phone with a lot of tabs"
                 width="360"
@@ -164,6 +172,10 @@
             </li>
             <li class="duties-list-item">
               <img
+                srcset="
+                  ./images/duties-section/phone@1x.jpg 1x,
+                  ./images/duties-section/phone@2x.jpg 2x
+                "
                 src="./images/duties-section/handwithaphone.jpg"
                 alt="a hand holding a phone"
                 width="360"
@@ -180,6 +192,10 @@
           <ul class="team-list list">
             <li class="team-item-bg">
               <img
+                srcset="
+                  ./images/team-section/markguerrero@1x.jpg 1x,
+                  ./images/team-section/markguerrero@2x.jpg 2x
+                "
                 src="./images/team-section/mark_guerrero.jpg"
                 alt="a worker"
                 width="264"
@@ -222,6 +238,10 @@
             </li>
             <li class="team-item-bg">
               <img
+                srcset="
+                  ./images/team-section/tomford@1x.jpg 1x,
+                  ./images/team-section/tomford@2x.jpg 2x
+                "
                 src="./images/team-section/tom_ford.jpg"
                 alt="a worker"
                 width="264"
@@ -264,6 +284,10 @@
             </li>
             <li class="team-item-bg">
               <img
+                srcset="
+                  ./images/team-section/camilagarcia@1x.jpg 1x,
+                  ./images/team-section/camilagarcia@2x.jpg 2x
+                "
                 src="./images/team-section/camila_garcia.jpg"
                 alt="a worker"
                 width="264"
@@ -306,6 +330,10 @@
             </li>
             <li class="team-item-bg">
               <img
+                srcset="
+                  ./images/team-section/danielwilson@1x.jpg 1x,
+                  ./images/team-section/danielwilson@2x.jpg 2x
+                "
                 src="./images/team-section/daniel_wilson.jpg"
                 alt="a worker"
                 width="264"
@@ -552,7 +580,79 @@
         </form>
       </div>
     </div>
+
+    <!-- Modal menu window -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="8" height="8" class="modal-menu-icon">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li>
+          <a href="./index.html" class="link" class="mob-menu-link">Studio</a>
+        </li>
+        <li>
+          <a href="./portfolio.html" class="link" class="mob-menu-link"
+            >Portfolio</a
+          >
+        </li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+      <ul class="mob-contacts-list list">
+        <li class="mob-contacts-item">
+          <a href="tel:+110001111111" class="mob-contacts-link mob-number link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="mob-contacts-item">
+          <a
+            href="mailto:info@devstudio.com"
+            class="mob-contacts-link mob-email link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mob-social-list list">
+        <li class="mob-social-item">
+          <a href="" class="mob-social-link">
+            <svg width="24" height="24" class="mob-social-icon">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mob-social-item">
+          <a href="" class="mob-social-link">
+            <svg width="24" height="24" class="mob-social-icon">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mob-social-item">
+          <a href="" class="mob-social-link">
+            <svg width="24" height="24" class="mob-social-icon">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mob-social-item">
+          <a href="" class="mob-social-link">
+            <svg width="24" height="24" class="mob-social-icon">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <!-- Js -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
