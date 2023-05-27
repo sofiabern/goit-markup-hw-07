@@ -1143,17 +1143,17 @@ img {
 }
 @media screen and (max-width: 767.8px) {
   .works-list {
-    gap: 48px;
+    row-gap: 48px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .works-list {
-    display: flex;
-    flex-wrap: wrap;
-    /* row-gap: 72px;
-    column-gap: 24px; */
-    gap: 72px 24px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    row-gap: 72px;
+    column-gap: 24px;
+    /* gap: 72px 24px; */
   }
 
   .works-list-item {
@@ -1165,6 +1165,10 @@ img {
   .works-list {
     row-gap: 48px;
     column-gap: 24px;
+  }
+
+  .works-list-item {
+    width: calc((100%-24px) / 3);
   }
 }
 
