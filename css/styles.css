@@ -1149,9 +1149,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .works-list {
-    /* flex-basis: ((100%-24px) / 2); */
-    row-gap: 72px;
-    column-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    /* row-gap: 72px;
+    column-gap: 24px; */
+    gap: 72px 24px;
+  }
+
+  .works-list-item {
+    width: calc((100%-24px) / 2);
   }
 }
 
