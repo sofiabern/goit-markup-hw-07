@@ -303,11 +303,6 @@ img {
     color: #434455;
   }
 
-  .mob-social-list {
-    display: flex;
-    gap: 56px;
-  }
-
   .mob-social-link {
     display: flex;
     justify-content: center;
@@ -327,6 +322,22 @@ img {
 
   .mob-social-icon {
     fill: var(--icon-color);
+  }
+}
+
+.mob-social-list {
+  display: flex;
+}
+
+@media screen and (max-width: 479px) {
+  .mob-social-list {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mob-social-list {
+    gap: 56px;
   }
 }
 
@@ -482,7 +493,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1440px;
+
   margin: 0 auto;
 }
 
@@ -525,6 +536,31 @@ img {
         ),
         url(../images/hero-section/bg-photo-tab@2x.jpg);
     }
+  }
+}
+
+@media screen and (max-width: 767.8px) {
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 428px;
+    height: 432px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    height: 436px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+    height: 600px;
   }
 }
 
@@ -674,9 +710,27 @@ img {
   letter-spacing: 0.02em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.8px) {
   .feature-subtitle {
     text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+
+  .feature-descr {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157.8px) {
+  .feature-subtitle {
+    text-align: left;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
   }
 }
 
@@ -828,7 +882,6 @@ img {
   justify-content: center;
   align-items: center;
 
-  width: 168px;
   height: 88px;
   color: var(--customer-logo-color);
   border: 1px solid var(--customer-logo-color);
@@ -836,6 +889,18 @@ img {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767.8px) {
+  .customer-icon-link {
+    width: 190px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-icon-link {
+    width: 168px;
+  }
 }
 
 .customer-icon-link:hover,
@@ -876,7 +941,7 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
-    justify-content: center;
+    max-width: 530px;
   }
 }
 
@@ -1164,7 +1229,7 @@ img {
 }
 
 @media screen and (min-width: 1158px) {
-  .portfoliot {
+  .portfolio {
     padding-top: 100px;
     padding-bottom: 120px;
   }
@@ -1331,7 +1396,12 @@ img {
 
 @media screen and (max-width: 767px) {
   .modal {
-    width: 392px;
+    width: 95%;
+    max-width: 392px;
+    height: 95%;
+    max-height: 584px;
+    overflow: scroll;
+    /* width: 392px; */
   }
 }
 
